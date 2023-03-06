@@ -23,7 +23,7 @@ jobs:
         env:
           CI: false
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./out s3://nextjs-sample --delete
+        run: aws s3 sync ./next s3://nextjs-sample --delete
       - name: invalidate
         uses: chetan/invalidate-cloudfront-action@master
         env:
